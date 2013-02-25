@@ -1,0 +1,404 @@
+/********************************************************
+INTRO
+*********************************************************/
+.introCol {
+	padding:100px 0;
+	border-bottom:1px solid #d2d2d2;
+	position:relative;
+	text-align:center;
+	.clearfix;
+	&:last-child {
+		border-bottom:0;
+	}
+	&.small {
+		padding:20px;
+		cursor:pointer;
+		&:hover {
+			background:#f1f1f1;
+		}
+	}
+	.img {
+		margin-bottom:20px;
+		h4 {
+			background:#d2d2d2;
+			.border-radius(80px);
+			height:160px;
+			width:160px;
+			line-height:160px;
+			text-align:center;
+			margin:0 auto;
+		}
+	}
+	small.edit {
+		position:absolute;
+		top:0px;
+		right:20px;
+	}
+}
+
+
+
+
+
+/********************************************************
+PLAN SECTION
+*********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/*NAV BAR*/
+#main_container {
+	position:relative;
+	#plan_nav.navbar {
+		background:#fff;
+		.navbar-inner {
+			border:0;
+			font-size:1.2em;
+			.progress {
+				position:relative;
+				top:10px;
+			}
+
+		}
+		&.fixed {
+			position:fixed;
+			z-index:999;
+			top:0;
+			left:0;
+			width:100%;
+			background:#d2d2d2;
+			.navbar-inner {
+				background:#d2d2d2;
+				.container {				
+					margin:0 auto;
+					width:960px;
+				}
+			}
+		}
+	}
+	
+}
+
+
+/*
+THE WRAPPER THAT CONTAINS EACH SCROLLABLE SECTION
+includes:
+- off state
+- on state
+- active state
+- section header
+ */
+
+.wrapper {
+	padding:0px 0;
+	position:relative;
+	.opacity(50);
+	.section_header {
+		padding:00px;
+		background:#d2d2d2;
+		span {
+			display:none;
+		}
+	}
+	.items {
+		display:none;
+	}
+	&.active {
+		.opacity(100);
+		.items {
+			display:block;
+		}
+		.section_header {
+			p {
+				display:none;
+			}
+		}
+	}
+	&.complete {
+		.section_header {
+			background:lighten(@green, 40%);
+			span {
+				display:inline;
+			}
+		}
+		.scrollable {
+		}
+		.items {
+			display:block;
+		}
+	}
+	.switcher {
+		position:absolute;
+		top:5px;
+		right:0;
+		display:none;
+	}
+}
+
+
+/*OUR BASIC SCROLLABLE CONTAINER*/
+.scrollable, .scroll {
+	position:relative;
+	.clearfix;
+	overflow:hidden;
+	
+	.items {
+		width:9999em;
+		position:relative;
+		padding:20px 0;
+		.clearfix;
+	
+		.panel {
+			float:left;
+			margin:0;
+		}
+	}
+	
+}
+
+/*THE PANEL AND SIDEBAR*/
+.panel {
+	.panel_content {
+		padding:00px;
+	}
+	.panel_sidebar {
+		padding:0 20px;
+		&.options {
+			text-align:center;
+			label {
+				overflow:hidden;
+				input[type=checkbox] {
+					position:relative;
+					left:-100px;
+				}
+			}
+		}
+	}
+}	
+
+
+
+
+
+
+
+.sub-pane {
+	position:relative;
+}
+
+.edit-pane {
+	position:absolute;
+	top:0;
+	right:0;
+	.opacity(50);
+	&:hover {
+		.opacity(100);
+	}
+}
+.add-page-container {
+	position:relative;
+
+	form#add_build_child {
+
+	}
+}
+
+.panel_content {
+	position:relative;
+}
+
+
+.sub-tabs {
+	margin-bottom:40px;
+}
+
+
+/*********************************************************
+
+INDIVIDUAL SECTIONS 
+
+*********************************************************/
+
+/*CONCLUSION*/
+#conclusion {
+	display:none;
+}
+
+/*SCALE*/
+#scale {
+	#scale_overview {
+		.thumbnails {
+			margin:0;
+			li {
+				position:relative;
+				padding-top:135px;
+				overflow:hidden;
+				img {
+					display:none;
+				}
+				h4 {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					text-align:center;
+					background:#d2d2d2;
+					padding:50px 0;
+					font-size:2em;
+				}
+				&:hover {
+					div {
+						background:#f1f1f1;
+						
+						color:#000;
+						h4 {
+						}
+					}
+
+				}
+			}
+			label {
+				cursor:pointer;
+				overflow:hidden;
+				input {
+					position:absolute;
+					top:-100px;
+					left:0;
+				}
+			}
+			img {
+				display:block;
+				height:200px;
+				
+			}
+		}
+
+	}
+}
+
+
+/*OS*/
+#os_list {
+	li {
+		position:relative;
+		overflow:hidden;
+		a {
+			padding:15px;
+			span {
+				display:none;
+			}
+		}
+		span.supported {
+			background:lighten(@green, 40%);
+			font-size:9px;
+			padding:3px 25px;
+			text-align:center;
+			position:absolute;
+			top:10px;
+			right:-20px;
+			.opacity(70);
+			
+			transform: rotate(45deg);
+			-ms-transform: rotate(45deg); /* IE 9 */
+			-webkit-transform: rotate(45deg); /* Safari and Chrome */
+			-o-transform: rotate(45deg); /* Opera */
+			-moz-transform: rotate(45deg); /* Firefox */
+		}
+		&.active {
+			a {
+				background:lighten(@green, 10%);
+				background:lighten(@green, 40%);
+				color:darken(@green, 10%);
+				span {
+					display:inline;
+				}
+			}
+			span.supported {
+				background:#fff;
+				color:darken(@green, 10%);
+			}
+		}
+	}
+
+}
+
+.os_stats {
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+	li {
+		margin:0;
+		padding:0;
+		* {
+			margin-bottom:0;
+		}
+	}
+}
+
+#os_items {
+	.managed_supported {
+		#gradient>.vertical(lighten(@green, 49%), lighten(@green, 45%));
+		padding:10px;
+		.border-radius(5px);
+		border:1px solid lighten(@green, 30%);
+		margin:20px 0;
+	}
+}
+
+
+
+
+
+form {
+	label {
+		margin:0;
+		overflow:visible;
+		input {
+			margin:0;
+			position:relative;
+			left:2px;
+		}
+	}
+}
+
+
+
+
+
+.selection_container {
+}
+.border-bottom {
+	border-bottom:1px dashed #d2d2d2;
+	padding-bottom:20px;
+}
+
+
+
+
+
+
+.article {
+	border:1px solid #d2d2d2;
+	padding:20px;
+	.border-radius(5px);
+	margin:20px 0;
+	background:#eaeaea;
+	display:none;
+	position:relative;
+	
+	.close_article {
+		position:absolute;
+		top:10px;
+		right:10px;
+	}
+}
+
