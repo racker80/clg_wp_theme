@@ -23,13 +23,13 @@ TOP LEVEL PANE CONTAINER
 				TOP LEVEL PANE
 				*****************************************************************************/
 				?>		
-				<div class="pane row">
+				<div class="pane row-fluid">
 					<?php
 					/*****************************************************************************
 					SIDEBAR FOR TABBED CONTENT
 					*****************************************************************************/
 					?>
-					<div id="chapters" class="span3 sidebar">
+					<div id="chapters" class="span3">
 						<?php include('includes/chapters.php'); ?>
 					</div><!-- sidebar -->
 
@@ -38,9 +38,9 @@ TOP LEVEL PANE CONTAINER
 				SUB PANES FOR TABBED CONTENT
 				*****************************************************************************/
 				?>
-					<div class="sub-panes" id="<?php echo $post->post_name; ?>-subtabs">
+					<div class="sub-panes span9" id="<?php echo $post->post_name; ?>-subtabs">
 	
-								<div class="span9 pane-content sub-pane" id="<?php echo $post->ID; ?>-chapter">
+								<div class="pane-content sub-pane" id="<?php echo $post->ID; ?>-chapter">
 									
 									<?php
 									/*****************************************************************************

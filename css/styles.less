@@ -1,6 +1,6 @@
 @import 'normalize.css';
 @import '../bootstrap/less/bootstrap.less';
-@import '../bootstrap/less/responsive.less';
+//@import '../bootstrap/less/responsive.less';
 @import 'rackspace.less';
 
 
@@ -197,7 +197,7 @@ button.full {
 CHAPTERS NAVIGATION
 *********************************************************/
 #chapters {
-	padding:40px 0 0 20px;
+	padding:40px 0 0 0px;
 	h4 {
 		.caps;
 		.narrow;
@@ -237,6 +237,9 @@ CONTENT PANES
 	margin:0 20px 10px 0;
 }
 
+.parent-panes {
+	padding:0 10px;
+}
 
 .pane {
 	position:relative;
@@ -246,13 +249,13 @@ CONTENT PANES
 	SIDEBAR NAV
 	*********************************************************/
 	.sidebar {
-		padding:40px 0 0 20px;
+		padding:0px 0 0 0px;
 	}
 
 
 
 	.pane-content {
-		padding:40px 20px 0 0;
+		padding:40px 0px 0 0;
 
 		.pane-content-header {
 			.chunk;
@@ -269,6 +272,19 @@ CONTENT PANES
 				width:100%;
 				height:auto;
 			}
+			
+			form {
+				div.control-group {
+					
+					div.controls {
+					}
+				}
+				label {
+					.narrow;
+					line-height:1.3em;
+				}	
+			}
+			
 		}
 
 		.pane-content-copy {
@@ -314,7 +330,7 @@ CONTENT PANES
 	}
 	
 	.pane-content.pane-left {
-		padding:40px 0 0 20px;
+		padding:40px 0 0 0px;
 	}
 }
 
@@ -334,10 +350,10 @@ OVERVIEW PANE
 			.clearfix;
 			.row-header {
 				text-align:center;
-				padding:0 20px;
+				padding:0 0px;
 			}
 			.row-content {
-				padding:0 20px;
+				padding:0 0px;
 				.lead;
 			}
 			.row-content {

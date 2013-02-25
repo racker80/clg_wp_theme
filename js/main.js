@@ -2,6 +2,31 @@
 	jQuery(document).ready(function($){
 
 
+		if($('#clone_private_ip').size() > 0) {
+			var clg_clone_private_ip = $.cookies.get('clg_clone_private_ip');
+			if(clg_clone_private_ip) {
+				$('span.replace_clone_private_ip').html(clg_clone_private_ip);
+				$('#clone_private_ip').val(clg_clone_private_ip);
+			}
+			$('#clone_private_ip').keyup(function() {
+			  $('span.replace_clone_private_ip').html($(this).val());
+				$.cookies.set('clg_clone_private_ip', $(this).val());
+			});
+		}
+
+
+		if($('#master_private_ip').size() > 0) {
+			var clg_master_private_ip = $.cookies.get('clg_master_private_ip');
+			if(clg_master_private_ip) {
+				$('span.replace_master_private_ip').html(clg_master_private_ip);
+				$('#master_private_ip').val(clg_master_private_ip);
+			}
+			$('#master_private_ip').keyup(function() {
+			  $('span.replace_master_private_ip').html($(this).val());
+				$.cookies.set('clg_master_private_ip', $(this).val());
+			});
+		}
+
 
 		$(".bannertabs").tabs("#banner .copy > .pane", {
 
