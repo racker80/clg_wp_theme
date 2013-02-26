@@ -43,37 +43,37 @@
 
 <br><br><br>
 <div id="footer">
-	
+<?php/*?>	
 	<div id="customers-using">
 		<h3>READ HOW CUSTOMERS ARE USING THE OPEN CLOUD</h3>
 		<div class="row-fluid">
 			<div class="cust span3">
 				<a href="http://rackspace.com/customers/underarmour/" target="_blank">
-					<img src="<?php echo get_bloginfo('template_directory'); ?>/img/underarmour.png" alt="">
+					<img src="<?php echo get_bloginfo('template_directory'); ?>/application/img/underarmour.png" alt="">
 					UnderArmour chooses Rackspace for best in class service.
 				</a>
 			</div>
 			<div class="cust span3">
 				<a href="http://rackspace.com/customers/soasta/" target="_blank">
-					<img src="<?php echo get_bloginfo('template_directory'); ?>/img/soasta.png" alt="">
+					<img src="<?php echo get_bloginfo('template_directory'); ?>/application/img/soasta.png" alt="">
 				Spinning up thousands of servers a day, across the globe.	
 				</a>
 			</div>
 			<div class="cust span3">
 				<a href="http://rackspace.com/customers/xcommerce/" target="_blank">
-					<img src="<?php echo get_bloginfo('template_directory'); ?>/img/xcom.png" alt="">
+					<img src="<?php echo get_bloginfo('template_directory'); ?>/application/img/xcom.png" alt="">
 					On-demand access to a powerful stack of e-commerce technologies.
 				</a>
 			</div>
 			<div class="cust span3">
 				<a href="http://rackspace.com/customers/scalextreme/" target="_blank">
-					<img src="<?php echo get_bloginfo('template_directory'); ?>/img/scale.png" alt="">
+					<img src="<?php echo get_bloginfo('template_directory'); ?>/application/img/scale.png" alt="">
 					Server monitoring and management with a unified interface.
 				</a>
 			</div>
 		</div>
 	</div>
-
+*/?>
 <div id="rackFooter" class="clearfix">
 	<div class="row-fluid">
 		<div class="span2 push_0">

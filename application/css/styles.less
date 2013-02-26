@@ -1,6 +1,6 @@
 @import 'normalize.css';
-@import '../bootstrap/less/bootstrap.less';
-//@import '../bootstrap/less/responsive.less';
+@import '/bootstrap/less/bootstrap.less';
+//@import '/bootstrap/less/responsive.less';
 @import 'rackspace.less';
 
 
@@ -16,7 +16,6 @@
 input, textarea {
 	.box-sizing(content-box);
 }
-
 
 
 h1 {
@@ -42,25 +41,7 @@ p {
 	.text16;
 }
 
-.lead {
- 	h3 {
-		.caps;
-		.narrow;
-		font-size:36px;
-		line-height:108%;
-		letter-spacing:-.005em;
-		padding:0 0 .5em 0;
-		a {
-			.caps;
-			.narrow;
-		}
-	}
-	p {
-		.text18;
-		font-size:1.4em;
-	}
-	
-}
+
 
 body {
 	background:#d2d2d2;
@@ -176,6 +157,185 @@ SUBNAVIGATION
 }
 
 
+
+
+
+
+
+
+/********************************************************
+CONTENT STYLES
+*********************************************************/
+.alignright {
+	float:right;
+	margin:0 0 10px 20px;
+}
+.alignleft {
+	float:left;
+	margin:0 20px 10px 0;
+}
+
+
+
+/********************************************************
+CONTENT PANES
+*********************************************************/
+.content-wrapper {
+	padding:40px 10px;
+	.book-container {
+		position:relative;
+		.clearfix();
+		
+		/********************************************************
+		CHAPTERS NAVIGATION
+		*********************************************************/
+		#chapters {
+			padding:0px 0 0 0px;
+			h4 {
+				.caps;
+				.narrow;
+
+			}
+			.nav.nav-tabs {
+				li {
+					a {
+
+						text-decoration:none!important;
+						.text14;
+					}
+					&.active {
+						a {
+							background-color: @linkColor;
+							color:#fff;
+							text-decoration:none!important;
+						}
+					}
+				}
+			}	
+		}
+		
+		/********************************************************
+		CHAPTER CONTENT CONTAINER
+		*********************************************************/
+		.chapter-content-container {
+			
+			
+			/********************************************************
+			CONTENT HEADER
+			*********************************************************/
+			.chapter-content-header {
+				.chunk;
+				padding-top:0;
+				position:relative;
+				h2 {}
+				h3 {}
+				p {
+				}
+				ul {
+					li {}
+				}
+				img {
+					display:block;
+					width:100%;
+					height:auto;
+				}
+
+				.add_section {
+					position:absolute;
+					bottom:0;
+					right:0;
+					.opacity(30);
+					&:hover {
+						.opacity(100);
+					}
+				}
+				form {
+					div.control-group {
+
+						div.controls {
+						}
+					}
+					label {
+						.narrow;
+						line-height:1.3em;
+					}	
+				}
+			}
+			
+			
+			/********************************************************
+			CHAPTER CONTENT 
+			*********************************************************/
+			.chapter-content {
+				section {
+					.chunk;
+					p {
+
+					}
+					pre {
+
+					}
+					h2 {
+					}
+					h3 {
+						.lite;
+					}
+					h4 {
+
+					}
+					h5 {
+
+					}
+					p {
+						strong {
+							color:#000;
+							font-weight:800px;
+						}
+					}
+					ul {
+						li {
+
+						}
+						&.arrow16 {
+						}
+						&.check16 {
+
+						}
+					}
+
+				}
+			}
+		}
+		
+		
+	}
+}
+
+.lead {
+ 	h3 {
+		.caps;
+		.narrow;
+		font-size:36px;
+		line-height:108%;
+		letter-spacing:-.005em;
+		padding:0 0 .5em 0;
+		a {
+			.caps;
+			.narrow;
+		}
+	}
+	h4 {
+		margin-bottom:10px;
+	}
+	p {
+		.text18;
+	}
+	ul {
+		
+	}
+	
+}
+
 .article-overview {
 	height:250px;
 }
@@ -193,161 +353,65 @@ button.full {
 
 
 
-/********************************************************
-CHAPTERS NAVIGATION
-*********************************************************/
-#chapters {
-	padding:40px 0 0 0px;
-	h4 {
-		.caps;
-		.narrow;
 
-	}
-	.nav.nav-tabs {
-		li {
-			a {
-
-				text-decoration:none!important;
-				.text14;
-			}
-			&.active {
-				a {
-					background-color: @linkColor;
-					color:#fff;
-					text-decoration:none!important;
-				}
-			}
-		}
-	}	
-}
-
-
-
-
-/********************************************************
-CONTENT PANES
-*********************************************************/
-
-.alignright {
-	float:right;
-	margin:0 0 10px 20px;
-}
-.alignleft {
-	float:left;
-	margin:0 20px 10px 0;
-}
-
-.parent-panes {
-	padding:0 10px;
-}
-
-.pane {
-	position:relative;
-	.clearfix;
-
-	/********************************************************
-	SIDEBAR NAV
-	*********************************************************/
-	.sidebar {
-		padding:0px 0 0 0px;
-	}
-
-
-
-	.pane-content {
-		padding:40px 0px 0 0;
-
-		.pane-content-header {
-			.chunk;
-			padding-top:0;
-			h2 {}
-			h3 {}
-			p {
-			}
-			ul {
-				li {}
-			}
-			img {
-				display:block;
-				width:100%;
-				height:auto;
-			}
-			
-			form {
-				div.control-group {
-					
-					div.controls {
-					}
-				}
-				label {
-					.narrow;
-					line-height:1.3em;
-				}	
-			}
-			
-		}
-
-		.pane-content-copy {
-			section {
-				.chunk;
-				p {
-					
-				}
-				pre {
-				 
-				}
-				h2 {
-				}
-				h3 {
-					.lite;
-				}
-				h4 {
-
-				}
-				h5 {
-					
-				}
-				p {
-					strong {
-						color:#000;
-						font-weight:800px;
-					}
-				}
-				ul {
-					li {
-						
-					}
-					&.arrow16 {
-					}
-					&.check16 {
-
-					}
-				}
-				
-			}
-		}
-
-	}
-	
-	.pane-content.pane-left {
-		padding:40px 0 0 0px;
-	}
-}
 
 /********************************************************
 OVERVIEW PANE
 *********************************************************/
-.pane-overview {
+.overview-content {
 	.hero-unit {
 		.border-radius(0);
 		background:transparent;
 		border-bottom:1px solid #d2d2d2;
 	}
+	.well {
+		text-align:center;
+		margin:40px 0;
+		background:@blue;
+		p {
+			color:#fff;
+			a {
+				color:#fff;
+			}
+		}
+		a.btn {
+			color:#333;
+		}
+		*{
+			text-align:center;
+		}
+		h3 {
+			text-align:center;
+			color:#fff;
+		}
+	}
+	.book_image {
+	}
+	.cols {
+		margin:40px 0;
+		>div.span4 {
+			padding:0 10px;	
+		}
+	
+		h3 {
+			.lite;
+		}
+		div {
+			p {
+				.text14;
+			}
+		}
+	}
 	section {
 			margin:20px 0;
 			padding:20px 0;
 			border-bottom:1px solid #f1f1f1;
-			.clearfix;
+			img {
+				display:block;
+				width:100%;
+				height:auto;
+			}
+			.clearfix();
 			.row-header {
 				text-align:center;
 				padding:0 0px;
@@ -355,6 +419,7 @@ OVERVIEW PANE
 			.row-content {
 				padding:0 0px;
 				.lead;
+
 			}
 			.row-content {
 				ul {

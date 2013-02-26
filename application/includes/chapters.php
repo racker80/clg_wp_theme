@@ -25,6 +25,7 @@ BUILD THE CHAPTERS POSTS
 	?>
 </ul>
 
+<?php /*?>
 <h5>Still need help?</h5>
 <ul class="unstyled">
 	<li>
@@ -38,11 +39,11 @@ BUILD THE CHAPTERS POSTS
 		
 	</li>
 </ul>
-	
+	*/?>
 
 <?php 
 /*****************************************************************************
 ADD THE MODAL
 *****************************************************************************/
-include(locate_template('includes/modal-chapters.php'));
+include(locate_template('application/includes/modal-chapters.php'));
 ?>

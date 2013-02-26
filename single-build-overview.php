@@ -5,25 +5,22 @@ Template Name: Build Overview
 ?>
 <?php get_header(); ?>
 
-<?php
+<?php $sp = sp(); ?>			
 
-		
-		$sp = sp();
+<?php include('application/includes/sub_nav.php'); ?>
 
-?>			
-
-<?php include('includes/sub_nav.php'); ?>
 <?php
 /*****************************************************************************
 TOP LEVEL PANE CONTAINER
 *****************************************************************************/
 ?>
-	<div class="parent-panes panes">
+	<div class="content-wrapper">
 
 		<?php 
 			while(have_posts()) : the_post(); 			
 		?>
-		<div class="pane pane-overview">
+		<div class="overview-content">
+	
 			<?php the_content(); ?>
 		</div>
 		<?php endwhile;?>

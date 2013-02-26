@@ -41,80 +41,12 @@
 		    }).slideshow();
 
 		
-		//BUILD
-		$('.tabs').tabs('.panes > .pane', {
-			current: 'active',
-			tabs:'li'
-		}).slideshow({
-			clickable:false,
-			autoplay:true
-		});
 
-/*
-		$('.sub-tabs').each(function(){
-			var ths = $(this);
-			var subPanes = $('#'+ths.data('id')+' .sub-pane');
-			//var subPanes = ths.parents('.pane').find('.sub-panes > .sub-pane');
-			ths.tabs(subPanes, {
-				current: 'active',
-				tabs:'li',
-				//effect: 'slide'
-			}).slideshow({
-				clickable:false
-			});
-		});
-*/		
+
 
 		
 		
-		$('.survey').each(function(){
-			var ths = $(this);
-			ths.scrollable({
-				keyboard: false,
-				mousewheel: false,
-				touch: false
-			});
-			
-			
-			var api = ths.data('scrollable');
-			var items = api.getItems();
-			
-			ths.height($(items[0]).height());
-			api.onBeforeSeek(function(){
-				var h = ths.height();
-				
-				var index = api.getIndex();
-				var nextHeight = $(items[index+1]).height();
-				if(nextHeight > h) {
-					ths.animate({
-						height: nextHeight
-					}, 200);
-					$('.survey-copy').animate({
-						height: nextHeight
-					}, 200);
-				}
-				
-				
-			});
-		});
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
+	
 		
 		
 		

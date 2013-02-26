@@ -24,7 +24,7 @@ sidebars, comments, ect.
 	- adding custom fields to user profiles
 */
 require_once('library/bones.php'); // if you remove this, bones will break
-require_once('library/bones-custom.php'); // if you remove this, bones will break
+require_once('application/functions.php'); // if you remove this, bones will break
 /*
 2. library/custom-post-type.php
     - an example custom post type

@@ -1,6 +1,6 @@
 	
 	
-		<?php include('includes/footer.php'); ?>
+		<?php include('application/includes/footer.php'); ?>
 
 
 

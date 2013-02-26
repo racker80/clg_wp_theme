@@ -1,7 +1,10 @@
 <?php
 if(is_user_logged_in()) { ?>
-	<a class="btn" href="<?php echo get_edit_post_link( $post->ID ); ?>" target="_blank"><i class="icon-pencil"></i></a> 
-		<button data-target="#myModal-<?php echo $post->post_name; ?>" class="btn" data-toggle="modal"><i class="icon-plus"></i> Add New Page</button>
+	<div class="add_section">
+		<a class="btn" href="<?php echo get_edit_post_link( $post->ID ); ?>" target="_blank"><i class="icon-pencil"></i></a> 
+			<button data-target="#myModal-<?php echo $post->post_name; ?>" class="btn" data-toggle="modal"><i class="icon-plus"></i> Add New Page</button>
+		
+	</div>
 												
 	<div class="add-page-container">
 

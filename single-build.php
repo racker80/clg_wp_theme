@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 
-<?php
-		
-$sp = sp();
-
-?>			
-<?php include('includes/sub_nav.php'); ?>
+<?php $sp = sp(); ?>			
+<?php include('application/includes/sub_nav.php'); ?>
 
 
 <?php
@@ -13,7 +9,7 @@ $sp = sp();
 TOP LEVEL PANE CONTAINER
 *****************************************************************************/
 ?>
-	<div class="parent-panes panes">
+	<div class="content-wrapper">
 
 		<?php 
 			while(have_posts()) : the_post(); 
@@ -23,14 +19,14 @@ TOP LEVEL PANE CONTAINER
 				TOP LEVEL PANE
 				*****************************************************************************/
 				?>		
-				<div class="pane row-fluid">
+				<div class="book-container row-fluid">
 					<?php
 					/*****************************************************************************
 					SIDEBAR FOR TABBED CONTENT
 					*****************************************************************************/
 					?>
 					<div id="chapters" class="span3">
-						<?php include('includes/chapters.php'); ?>
+						<?php include('application/includes/chapters.php'); ?>
 					</div><!-- sidebar -->
 
 				<?php
@@ -38,19 +34,17 @@ TOP LEVEL PANE CONTAINER
 				SUB PANES FOR TABBED CONTENT
 				*****************************************************************************/
 				?>
-					<div class="sub-panes span9" id="<?php echo $post->post_name; ?>-subtabs">
-	
-								<div class="pane-content sub-pane" id="<?php echo $post->ID; ?>-chapter">
+					<div id="<?php echo $post->ID; ?>-content" class="span9 chapter-content-container" >
 									
 									<?php
 									/*****************************************************************************
 									PAGE CONTENT LEAD
 									*****************************************************************************/
 									?>
-									<div class="pane-content-header lead">
+									<div class="chapter-content-header lead">
 										<?php the_content(); ?>
 										
-										<?php include('includes/modal-newpage.php'); ?>
+										<?php include('application/includes/modal-newpage.php'); ?>
 										
 									</div><!-- pane content header -->
 
@@ -59,7 +53,7 @@ TOP LEVEL PANE CONTAINER
 									PAGE CONTENT SUB SECTIONS
 									*****************************************************************************/
 									?>
-									<div class="pane-content-copy">
+									<div class="chapter-content">
 										<?php
 										$sections = new WP_Query(array(
 											'post_parent' => $post->ID,
@@ -73,7 +67,7 @@ TOP LEVEL PANE CONTAINER
 										<?php while($sections->have_posts()) : $sections->the_post(); ?>
 											<section class="section" data-id="<?php echo $sections->post->ID; ?>">
 												<h2><?php the_title(); ?> 
-													<?php include('includes/modal-editpost.php'); ?>
+													<?php include('application/includes/modal-editpost.php'); ?>
 												</h2>
 													
 												<?php the_content(); ?>
@@ -107,12 +101,11 @@ TOP LEVEL PANE CONTAINER
 										
 									</div><!-- pane content copy -->
 
-								</div><!-- sub pane -->
 						
 
-					</div><!-- sub panes -->
+					</div><!-- chapter-content -->
 
-				</div><!-- pane -->
+				</div><!-- chapter-container -->
 		<?php endwhile; wp_reset_postdata(); ?>
 		
 

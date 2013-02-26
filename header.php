@@ -39,7 +39,7 @@
 	
 	<body <?php body_class(); ?>>
 	
-		<div id="supportPaths" class="container">
+		<div id="supportPaths" class="container container-960">
 			
 			
-			<?php include('includes/global_nav.php'); ?>
+			<?php include('application/includes/global_nav.php'); ?>

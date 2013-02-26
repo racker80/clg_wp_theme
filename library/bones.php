@@ -140,11 +140,6 @@ function bones_scripts_and_styles() {
 
     //adding scripts file in the footer
     wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
-    wp_register_script( 'jquerytools-js', get_stylesheet_directory_uri() . '/js/vendor/jquery-tools.min.js', array( 'jquery' ), '', true );
-    wp_register_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/bootstrap/js/bootstrap.js', array( 'jquery' ), '', true );
-    wp_register_script( 'cookies-js', get_stylesheet_directory_uri() . '/js/vendor/jquery.cookies.2.2.0.js', array( 'jquery' ), '', true );
-    wp_register_script( 'plugins-js', get_stylesheet_directory_uri() . '/js/plugins.js', array( 'jquery' ), '', true );
-    wp_register_script( 'prototype-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), '', true );
 
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );
@@ -157,18 +152,6 @@ function bones_scripts_and_styles() {
     */
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'bones-js' );
-    wp_enqueue_script( 'jquerytools-js' );
-    wp_enqueue_script( 'bootstrap-js' );
-    wp_enqueue_script( 'cookies-js' );
-    wp_enqueue_script( 'plugins-js' );
-    wp_enqueue_script( 'prototype-js' );
-
-	// declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)
-	wp_localize_script( 'prototype-js', 'rackspace', array( 
-		'ajaxurl' => admin_url( 'admin-ajax.php' ),
-		'edit'=>  admin_url( 'post.php?action=edit&post=' )
-		
-		) );
 
   }
 }

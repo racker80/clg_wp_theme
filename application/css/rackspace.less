@@ -3,6 +3,20 @@
 variables
 ************************************************************************
 ************************************************************************/
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+
+// Sprite icons path
+// -------------------------
+@iconSpritePath:          "bootstrap/img/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "bootstrap/img/glyphicons-halflings-white.png";
+
+
 @darkGray:			#333333;
 
 
@@ -52,7 +66,9 @@ body {
 	-webkit-text-size-adjust: 100%;
  }
 
-
+.container-960 {
+	width:960px;
+}
 
 
 /************************************************************************

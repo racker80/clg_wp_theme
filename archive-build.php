@@ -9,7 +9,7 @@
 	));
 ?>			
 
-<?php //include('includes/sub_nav.php'); ?>
+<?php //include('application/includes/sub_nav.php'); ?>
 
 	<div class="featured_list">
 		<?php 

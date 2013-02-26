@@ -57,5 +57,5 @@ $chapters = new WP_Query(array(
 /*****************************************************************************
 ADD THE MODAL
 *****************************************************************************/
-include('includes/modal-chapters.php'); 
+include('application/includes/modal-chapters.php'); 
 ?>
