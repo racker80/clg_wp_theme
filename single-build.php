@@ -74,33 +74,15 @@ TOP LEVEL PANE CONTAINER
 											</section>
 										<?php endwhile; wp_reset_postdata(); ?>
 
-										<?php
-										/*
-										$pages = get_children(array( 
-										    'post_parent' => $top_parent->ID,
-										    'post_type'   => 'any', 
-										    'numberposts' => -1,
-										    'post_status' => 'any',
-											'orderby'=>'menu_order',
-											'order'=>'ASC'
-										));
-										$pages = array_keys($pages);
-										$current = array_search($post->ID, $pages);
-										if($current+1 < count($pages)) {
-											$prevID = get_post($pages[$current-1]);
-											$nextID = get_post($pages[$current+1]);
-											?>
-											<a href="<?php echo get_permalink($nextID->ID); ?>" class="forward btn btn-large btn-primary">Next: <?php echo $nextID->post_title; ?></a>
-											
-											<?php
-										}
-										*/
-										
-										$next = getNextItem($sp->guides[$sp->current_guide]->books[$sp->current_book]->chapters, $sp->current_chapter);
-										?>
 										
 									</div><!-- pane content copy -->
-
+									<?php
+									if($sp->next_chapter) :
+									?>
+									<div class="chapter-navigation">
+										<a href="<?php echo get_permalink($sp->next_chapter->ID); ?>" class="btn btn-large btn-primary">Next: <?php echo $sp->next_chapter->post_title; ?></a>
+									</div>
+									<?php endif;?>
 						
 
 					</div><!-- chapter-content -->

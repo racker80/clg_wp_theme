@@ -6,7 +6,7 @@ $class = ' class="active"';
 
 <div id="globalnav">
 	<div class="navbar">
-			<a class="brand" href="<?php bloginfo('url'); ?>">Support Paths</a>
+			<a class="brand" href="<?php bloginfo('url'); ?>">Cloud Launch Guide</a>
 		    <ul class="nav pull-right">
 		      <li<?php if($basename[0] == 'index_build') echo $class; ?>><a href="<?php bloginfo('url'); ?>/build">Build</a></li>
 		      <li<?php if($basename[0] == 'index_build') echo $class; ?>><a href="https://cart.rackspace.com/cloud/" target="_blank">Sign Up</a></li>

@@ -131,7 +131,26 @@ GLOBAL NAV
 SUBNAVIGATION
 *********************************************************/
 #subnav {
-	.clearfix;
+	.clearfix();
+	  background-color: @navbarLinkBackgroundActive;
+	  .box-shadow(inset 0 3px 8px rgba(0,0,0,.125));
+	ul.nav {
+
+		li {
+			a {
+				color: lighten(@navbarLinkColorActive, 20%);
+				text-decoration: none;
+
+			}
+			&.active {
+				a {
+					color: @navbarLinkColorActive;
+					background:#fff;
+				}			
+			}
+		}
+	}
+	/*
 	background:@rackRed;
 	margin:0;
 		ul.nav {
@@ -154,6 +173,7 @@ SUBNAVIGATION
 			text-shadow:none!important;
 			
 		}
+		*/
 }
 
 
@@ -309,6 +329,13 @@ CONTENT PANES
 		
 		
 	}
+}
+
+.chapter-navigation {
+	margin:40px 0;
+	.well;
+	text-align:center;
+	background:#d2d2d2;
 }
 
 .lead {

@@ -116,9 +116,15 @@ function sp() {
 			if($book->ID == $post->post_parent) {
 				//$sp['current_book'] = $book->ID;				
 				$sp->current_book = $book->ID;				
+				$sp->current_book_position = $book->menu_order;	
+				$sp->next_book = current($books);
+				
+							
 			}
 			if($post->post_parent == $sp->current_guide) {
 				$sp->current_book = $post->ID;				
+				$sp->current_book_position = $post->menu_order;				
+				$sp->next_book = current($books);
 				
 			}
 			
@@ -136,6 +142,7 @@ function sp() {
 				if($c->ID == $post->ID) {
 					//$sp['current_chapter'] = $c->ID;				
 					$sp->current_chapter = $c->ID;				
+					$sp->current_chapter_position = $c->menu_order;				
 				}
 			}
 			$book->chapters = $chapters;
@@ -147,8 +154,33 @@ function sp() {
 	//GUIDES AND BOOKS
 	
 	$sp->guides = $guides;
-
-	//$sp->next_chapter = next($sp->guides[$sp->current_guide]->books[$sp->current_book]->chapters[$sp->current_chapter])->ID;
+	
+	$last = end(array_values($sp->guides[$sp->current_guide]->books));
+	$last = end(array_values($last->chapters))->ID;
+	//print_r($last);
+	$chapters = array_values($sp->guides[$sp->current_guide]->books[$sp->current_book]->chapters);
+	foreach($chapters as $key=>$value) {
+		if($value->menu_order == $sp->current_chapter_position) {
+			
+			//$sp->next_chapter = next($sp->guides[$sp->current_guide]->books[$sp->current_book]->chapters);
+			if($chapters[$key+1]) {
+				$sp->next_chapter = $chapters[$key+1];
+				
+			} else {
+				if($post->ID == $last) {
+					//$sp->next_chapter = $sp->next_book;
+				} else {
+					$sp->next_chapter = $sp->next_book;
+					
+				}
+				
+			}
+			if($chapters[$key-1]) {
+				$sp->prev_chapter = $chapters[$key+-1];		
+			}
+		}
+	}
+	//$sp->guides[$sp->current_guide]->books[$sp->current_book]->chapters[$sp->current_chapter];
 	
 
 	return $sp;
