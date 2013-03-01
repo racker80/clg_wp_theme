@@ -182,7 +182,6 @@ function sp() {
 	}
 	//$sp->guides[$sp->current_guide]->books[$sp->current_book]->chapters[$sp->current_chapter];
 	
-
 	return $sp;
 	
 }

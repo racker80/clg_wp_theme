@@ -5876,7 +5876,7 @@ GLOBAL NAV
 }
 #globalnav div.navbar {
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   *zoom: 1;
 }
 #globalnav div.navbar:before,
@@ -5891,6 +5891,11 @@ GLOBAL NAV
 #globalnav div.navbar a.brand {
   margin: 0;
   color: #fff;
+  height: 85px;
+  width: 400px;
+  background: url('../img/cloudlaunchguide-logo-plane.png') top left no-repeat;
+  overflow: hidden;
+  text-indent: -999px;
 }
 #globalnav div.navbar ul li a {
   font-size: 14px;
