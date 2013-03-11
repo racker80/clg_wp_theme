@@ -5893,7 +5893,7 @@ GLOBAL NAV
   color: #fff;
   height: 85px;
   width: 400px;
-  background: url('../img/cloudlaunchguide-logo-plane.png') top left no-repeat;
+  background: url('../img/cloudlaunchguide-logo-map.png') top left no-repeat;
   overflow: hidden;
   text-indent: -999px;
 }
@@ -6415,6 +6415,14 @@ FOOTER
   display: block;
   margin: 0;
 }
+span.replace_clone_private_ip {
+  background: #049cdb;
+  color: #fff;
+}
+span.replace_master_private_ip {
+  background: #a80000;
+  color: #fff;
+}
 #home .featured {
   padding: 20px 0 100px 0;
   border-bottom: 1px dashed #d2d2d2;
@@ -6440,4 +6448,22 @@ FOOTER
 }
 #home .col {
   padding: 20px;
+}
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (max-width: 481px) {
+  
+}
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) {
+  
 }

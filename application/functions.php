@@ -239,4 +239,45 @@ function lorem($word_limit){
 
 }
 
+
+
+// EXCLUDE POSTS, PAGES, CUSTOM POSTS
+/*
+add_filter( 'bwp_gxs_post_where', 'my_bwp_gxs_exclude_posts', 10, 2 );
+ 
+// EXCLUDE TAXONOMIES
+add_filter( 'bwp_gxs_term_exclude', 'my_bwp_gxs_exclude_terms', 10, 2 );
+ 
+function my_bwp_gxs_exclude_posts( $query_where_part ) {
+	$p = get_posts(array(
+		'post_type'=>'build',
+		'post_parent'=>array('0,503,35'),
+		'post_status'=>'publish',
+		'showposts'=>999,
+
+	));
+	foreach($p as $key=>$value) {
+		$ids[] = $value->ID;
+	}
+	
+	print_r($p);
+   return ' AND wposts.ID NOT IN (503, 35) ';
+    
+}
+ 
+function my_bwp_gxs_exclude_terms( $excluded, $taxonomy ) {
+    switch ( $taxonomy ) {
+        case 'category': return array( 'cat-slug1', 'cat-slug2' ); break;
+        case 'post_tag': return array( 'tag-slug1' ); break;
+        case 'genre': return array( 'genre-slug1', 'genre-slug2' ); break;
+    }
+    return array('');
+}
+add_action('bwp_gxs_modules_built', 'bwp_gxs_add_modules');
+function bwp_gxs_add_modules()
+{
+    global $bwp_gxs;
+    $bwp_gxs->add_module('post', 'most popular');
+}
+*/
 ?>

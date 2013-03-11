@@ -26,6 +26,18 @@
 				$.cookies.set('clg_master_private_ip', $(this).val());
 			});
 		}
+		
+		if($('#master_public_ip').size() > 0) {
+			var clg_master_public_ip = $.cookies.get('clg_master_public_ip');
+			if(clg_master_public_ip) {
+				$('span.replace_master_public_ip').html(clg_master_public_ip);
+				$('#master_public_ip').val(clg_master_public_ip);
+			}
+			$('#master_public_ip').keyup(function() {
+			  $('span.replace_master_public_ip').html($(this).val());
+				$.cookies.set('clg_master_public_ip', $(this).val());
+			});
+		}
 
 
 		$(".bannertabs").tabs("#banner .copy > .pane", {
